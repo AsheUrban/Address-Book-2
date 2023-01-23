@@ -40,11 +40,25 @@ Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 };
 
-// Contact.prototype.update = function() {
+// UI Logic ----------
 
+let addressBook = new AddressBook();
 
-// };
+function handleFormSubmission(event) {
+  event.preventDefault();
+  const inputtedFirstName = document.querySelector("input#new-first-name").value;
+  const inputtedLastName = document.querySelector("input#new-last-name").value;
+  const inputtedPhoneNumber = document.querySelector("input#new-phone-number").value;
+  let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
+  addressBook.addContact(newContact);
+  console.log(addressBook.contacts);
+}
 
+window.addEventListener("load", function() {
+  this.document.querySelector("form#new-contact").addEventListener("submit", handleFormSubmission);
+});
+
+// WIP Update function
 // AddressBook.prototype.update = function(contact, updateContact) {
 //   if (this.contacts[firstName, lastName, phoneNumber] !== firstName) {
 //     return updateContact;
@@ -52,6 +66,7 @@ Contact.prototype.fullName = function() {
 //   return contact;
 // };
 
+//THIS WORKS BUT IS NOT COMPREHENSIVE!
 // Contact.prototype.update = function() {
 //   return this.firstName + "!";
 // }
