@@ -29,10 +29,6 @@ AddressBook.prototype.deleteContact = function(id) {
   return true;
 };
 
-
-
-
-
 //Business Logic for Contacts
 function Contact(firstName, lastName, phoneNumber) {
   this.firstName = firstName;
@@ -43,3 +39,27 @@ function Contact(firstName, lastName, phoneNumber) {
 Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 };
+
+// Contact.prototype.update = function() {
+
+
+// };
+
+// AddressBook.prototype.update = function(contact, updateContact) {
+//   if (this.contacts[firstName, lastName, phoneNumber] !== firstName) {
+//     return updateContact;
+//   }
+//   return contact;
+// };
+
+// Contact.prototype.update = function() {
+//   return this.firstName + "!";
+// }
+
+// Contact.prototype.update = function(id, updateContact) {
+//   if (this.contacts[id] === undefined) {
+//     return false;
+//   }
+//   this.contacts[id] = updateContact;
+//   return true;
+// }
