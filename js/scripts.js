@@ -60,7 +60,6 @@ function listContacts(addressBookToDisplay){
 }
 
 function displayContactDetails(event) {
-
   const contact = addressBook.findContact(event.target.id);
   if(contact !== false) {
     document.querySelector(".first-name").innerText = contact.firstName;
